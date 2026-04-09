@@ -6,11 +6,422 @@
     <title>Assignment 3 - Landing Page</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <!-- ========== NAVBAR ========== -->
+  <body class="bg-[#050505] text-white font-sans">
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 right-0 bg-[#0a0a0a]/95 backdrop-blur-md z-[1000] px-[5%] py-4"
+    >
+      <div class="max-w-[1400px] mx-auto flex items-center justify-between">
+        <div class="text-[1.8rem] font-bold text-white">Tech.</div>
 
-    <!-- ========== HERO SECTION ========== -->
+        <ul class="hidden lg:flex items-center gap-10 list-none">
+          <li>
+            <a
+              href="#who-we-are"
+              class="font-medium transition-colors hover:text-[#4e19da]"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#what-we-do"
+              class="font-medium transition-colors hover:text-[#4e19da]"
+              >Service</a
+            >
+          </li>
+          <li>
+            <a
+              href="#our-work"
+              class="font-medium transition-colors hover:text-[#4e19da]"
+              >Our Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="#meet-the-team"
+              class="font-medium transition-colors hover:text-[#4e19da]"
+              >Team</a
+            >
+          </li>
+        </ul>
 
-    <!-- ========== FOOTER ========== -->
+        <a
+          href="#lets-collaborate"
+          class="hidden lg:inline-flex bg-[#4e19da] text-white px-16 py-4 rounded-full text-[1.2rem] font-bold transition-all hover:bg-[#5b21b6] hover:-translate-y-0.5"
+        >
+          Contact Us
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+        <label
+          for="menu-toggle"
+          class="lg:hidden flex flex-col gap-[6px] cursor-pointer peer-checked:hidden"
+        >
+          <span class="block w-[30px] h-[3px] bg-white rounded-full"></span>
+          <span class="block w-[30px] h-[3px] bg-white rounded-full"></span>
+          <span class="block w-[30px] h-[3px] bg-white rounded-full"></span>
+        </label>
+
+        <div
+          class="fixed top-0 left-0 w-full h-screen bg-[#000000] z-[1050] transition-transform duration-500 translate-y-[-100%] peer-checked:translate-y-0 lg:hidden flex flex-col px-[5%] py-4"
+        >
+          <div class="flex items-center justify-between w-full">
+            <div class="text-[1.8rem] font-bold text-white">Tech.</div>
+
+            <label for="menu-toggle" class="cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </label>
+          </div>
+
+          <ul class="flex flex-col gap-9 mt-12 list-none">
+            <li>
+              <a
+                href="#who-we-are"
+                class="text-[1.2rem] text-white font-normal hover:text-[#4e19da] transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#what-we-do"
+                class="text-[1.2rem] text-white font-normal hover:text-[#4e19da] transition-colors"
+                >Service</a
+              >
+            </li>
+            <li>
+              <a
+                href="#our-work"
+                class="text-[1.2rem] text-white font-normal hover:text-[#4e19da] transition-colors"
+                >Our Work</a
+              >
+            </li>
+            <li>
+              <a
+                href="#meet-the-team"
+                class="text-[1.2rem] text-white font-normal hover:text-[#4e19da] transition-colors"
+                >Team</a
+              >
+            </li>
+          </ul>
+
+          <a
+            href="#lets-collaborate"
+            class="mt-10 bg-[#4e19da] text-center text-white w-full py-4 rounded-full text-[1rem] font-medium transition-all hover:bg-[#5b21b6]"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header
+      class="pt-[100px] pb-0 px-[5%] bg-[linear-gradient(180deg,#0A0A0A_20.5%,#170731_86.38%)] flex flex-col md:flex-row items-center overflow-hidden min-h-auto md:min-h-screen"
+    >
+      <div
+        class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16 items-center w-full"
+      >
+        <div class="text-left w-full">
+          <h1
+            class="text-[2.6rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] mb-6 font-bold"
+          >
+            Build with the <br class="md:hidden" />
+            <span class="italic font-sans">Future.</span>
+          </h1>
+          <p
+            class="text-[1rem] md:text-[1.5rem] leading-[1.9] text-[#9494b8] mb-10 max-w-[650px]"
+          >
+            From building sleek websites and mobile apps to integrating AI
+            solutions, we help brands turn ideas into powerful digital
+            experiences that connect, engage, and scale.
+          </p>
+          <a
+            href="#lets-collaborate"
+            class="block w-full text-center bg-[#4e19da] text-white py-4 rounded-full text-[1.1rem] font-medium transition-all hover:bg-[#5b21b6] md:w-max md:inline-block md:px-35"
+          >
+            Let's Talk
+          </a>
+        </div>
+
+        <div
+          class="mt-12 md:mt-0 mb-[-2px] md:mb-[-1px] w-full flex justify-center relative"
+        >
+          <img
+            src="../assets/images/hand.png"
+            alt="Hand Phone"
+            class="max-w-full md:max-w-[700px] h-auto block"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- Who We Are -->
+    <section
+      id="who-we-are"
+      class="relative z-10 mt-[-100px] pt-[180px] pb-32 px-[5%] max-w-[1400px] mx-auto text-center"
+    >
+      <h2 class="text-[2.2rem] md:text-[3rem] mb-6 font-bold">Who We Are</h2>
+
+      <p
+        class="text-[1.5rem] md:text-[2rem] leading-[1.8] text-[#9494b8] max-w-[1000px] mx-auto"
+      >
+        We're a group of tech students trained in <br class="md:hidden" />
+        <span class="text-white font-semibold"
+          >building real-world digital products.</span
+        >
+        <br class="md:hidden" />
+        From coding to design, we
+        <span class="text-white font-semibold"
+          >craft modern <br class="md:hidden" />
+          solutions for modern problems.</span
+        >
+      </p>
+    </section>
+
+    <!-- What We do -->
+    <section id="what-we-do" class="py-32 px-[5%] max-w-[1400px] mx-auto">
+      <h2 class="text-[2.2rem] md:text-[3rem] text-center mb-4 font-bold">
+        What We do
+      </h2>
+      <p class="text-center text-[#9494b8] text-[1.5rem] mb-16">
+        We offer simple tech solutions to help your ideas grow.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-[#050505] border border-[#1f1f1f] rounded-[20px] p-8 md:p-11 text-center transition-all hover:-translate-y-2 hover:border-[#4e19da] hover:bg-[#0f0f0f]"
+        >
+          <img
+            src="../assets/icons/Website.png"
+            alt="Web Dev"
+            class="w-[55px] h-[55px] object-contain mx-auto mb-6"
+          />
+          <h3 class="text-[1.5rem] font-bold mb-4">Web Development</h3>
+          <p class="text-[#9494b8]">
+            Modern websites using HTML, CSS, JavaScript, and frameworks.
+          </p>
+        </div>
+        <div
+          class="bg-[#050505] border border-[#1f1f1f] rounded-[20px] p-8 md:p-11 text-center transition-all hover:-translate-y-2 hover:border-[#4e19da] hover:bg-[#0f0f0f]"
+        >
+          <img
+            src="../assets/icons/Mobile.png"
+            alt="App Dev"
+            class="w-[55px] h-[55px] object-contain mx-auto mb-6"
+          />
+          <h3 class="text-[1.5rem] font-bold mb-4">App Development</h3>
+          <p class="text-[#9494b8]">
+            Mobile and desktop apps tailored for your needs.
+          </p>
+        </div>
+        <div
+          class="bg-[#050505] border border-[#1f1f1f] rounded-[20px] p-8 md:p-11 text-center transition-all hover:-translate-y-2 hover:border-[#4e19da] hover:bg-[#0f0f0f]"
+        >
+          <img
+            src="../assets/icons/AI.png"
+            alt="AI"
+            class="w-[55px] h-[55px] object-contain mx-auto mb-6"
+          />
+          <h3 class="text-[1.4rem] font-bold mb-4">AI Integration</h3>
+          <p class="text-[#9494b8]">
+            Smart solutions using AI-powered tools and automation.
+          </p>
+        </div>
+        <div
+          class="bg-[#050505] border border-[#1f1f1f] rounded-[20px] p-8 md:p-11 text-center transition-all hover:-translate-y-2 hover:border-[#4e19da] hover:bg-[#0f0f0f]"
+        >
+          <img
+            src="../assets/icons/Paint.png"
+            alt="Design"
+            class="w-[55px] h-[55px] object-contain mx-auto mb-6"
+          />
+          <h3 class="text-[1.5rem] font-bold mb-4">UI/UX Design</h3>
+          <p class="text-[#9494b8]">
+            Clean and functional designs for better user experience.
+          </p>
+        </div>
+        <div
+          class="bg-[#050505] border border-[#1f1f1f] rounded-[20px] p-8 md:p-11 text-center transition-all hover:-translate-y-2 hover:border-[#4e19da] hover:bg-[#0f0f0f]"
+        >
+          <img
+            src="../assets/icons/Landing Page.png"
+            alt="Landing Page"
+            class="w-[55px] h-[55px] object-contain mx-auto mb-6"
+          />
+          <h3 class="text-[1.5rem] font-bold mb-4">Landing Page Design</h3>
+          <p class="text-[#9494b8]">
+            High-converting landing pages for your business.
+          </p>
+        </div>
+        <div
+          class="bg-[#050505] border border-[#1f1f1f] rounded-[20px] p-8 md:p-11 text-center transition-all hover:-translate-y-2 hover:border-[#4e19da] hover:bg-[#0f0f0f]"
+        >
+          <img
+            src="../assets/icons/CMS.png"
+            alt="CMS"
+            class="w-[55px] h-[55px] object-contain mx-auto mb-6"
+          />
+          <h3 class="text-[1.5rem] font-bold mb-4">CMS Integration</h3>
+          <p class="text-[#9494b8]">
+            Easy-to-manage websites with WordPress or Webflow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Work -->
+    <section id="our-work" class="py-32 px-[5%] max-w-[1400px] mx-auto">
+      <h2 class="text-[3rem] text-center mb-4 font-bold">Our work</h2>
+      <p class="text-center text-[#9494b8] text-[1.4rem] mb-16">
+        See what we've built with passion and purpose
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="flex flex-col">
+          <div class="rounded-[20px] overflow-hidden w-full">
+            <img
+              src="../assets/images/portofolio1.png"
+              alt="P1"
+              class="w-full block hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <p class="mt-4 text-[1.5rem] font-semibold text-left">Portofolio 1</p>
+        </div>
+
+        <div class="flex flex-col">
+          <div class="rounded-[20px] overflow-hidden w-full">
+            <img
+              src="../assets/images/portofolio2.png"
+              alt="P2"
+              class="w-full block hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <p class="mt-4 text-[1.5rem] font-semibold text-left">Portofolio 2</p>
+        </div>
+
+        <div class="flex flex-col">
+          <div class="rounded-[20px] overflow-hidden w-full">
+            <img
+              src="../assets/images/portofolio3.png"
+              alt="P3"
+              class="w-full block hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <p class="mt-4 text-[1.5rem] font-semibold text-left">Portofolio 3</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section id="meet-the-team" class="py-32 px-[5%] max-w-[1400px] mx-auto">
+      <h2 class="text-[3rem] text-center mb-4 font-bold">Meet the Team</h2>
+      <p class="text-center text-[#9494b8] text-[1.5rem] mb-16">
+        A group of future-ready tech makers.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="text-center">
+          <img
+            src="../assets/images/Jasper Kim.png"
+            alt="Jasper"
+            class="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full mx-auto mb-6 object-cover border-4 border-transparent"
+          />
+          <h4 class="text-[1.2rem] font-bold">Jasper Kim</h4>
+          <p class="text-[#9494b8]">Project Manager</p>
+        </div>
+        <div class="text-center">
+          <img
+            src="../assets/images/Alex Jonathan.png"
+            alt="Alex"
+            class="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full mx-auto mb-6 object-cover"
+          />
+          <h4 class="text-[1.2rem] font-bold">Alex Jonathan</h4>
+          <p class="text-[#9494b8]">Full-stack Developer</p>
+        </div>
+        <div class="text-center">
+          <img
+            src="../assets/images/Mario Lopez.png"
+            alt="Mario"
+            class="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full mx-auto mb-6 object-cover"
+          />
+          <h4 class="text-[1.2rem] font-bold">Mario Lopez</h4>
+          <p class="text-[#9494b8]">UI/UX Designer</p>
+        </div>
+        <div class="text-center">
+          <img
+            src="../assets/images/Jasper Kim2.png"
+            alt="Jasper 2"
+            class="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full mx-auto mb-6 object-cover"
+          />
+          <h4 class="text-[1.2rem] font-bold">Jasper Kim</h4>
+          <p class="text-[#9494b8]">Data Scientist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form lets collaborate -->
+    <section id="lets-collaborate" class="py-32 px-[5%] max-w-[1400px] mx-auto">
+      <h2 class="text-[3rem] text-center mb-4 font-bold">Let's Collaborate</h2>
+      <p class="text-center text-[#9494b8] text-[1.5rem] mb-16">
+        Need a tech team? We're ready to help
+      </p>
+
+      <form
+        class="max-w-[700px] mx-auto bg-[#050505] p-6 md:p-12 rounded-[20px] border-[#1f1f1f]"
+      >
+        <div class="mb-7">
+          <label class="block mb-2 text-left">Name</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            required
+            class="w-full bg-[#050505] border border-[#1f1f1f] rounded-[20px] p-6 text-white focus:border-[#4e19da] outline-none"
+          />
+        </div>
+        <div class="mb-7">
+          <label class="block mb-2 text-left">Email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            class="w-full bg-[#050505] border border-[#1f1f1f] rounded-[20px] p-6 text-white focus:border-[#4e19da] outline-none"
+          />
+        </div>
+        <div class="mb-7">
+          <label class="block mb-2 text-left">Message</label>
+          <textarea
+            rows="5"
+            placeholder="Enter your message"
+            required
+            class="w-full bg-[#050505] border border-[#1f1f1f] rounded-[20px] p-6 text-white focus:border-[#4e19da] outline-none resize-none"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-[#4e19da] py-5 rounded-full text-white text-[1.2rem] font-bold hover:bg-[#5b21b6] transition-all"
+        >
+          Send
+        </button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="text-center p-12 border-t border-[#1f1f1f] bg-[#050505] text-[#9494b8]"
+    >
+      <p>@ 2025 Web Programming Hack. All rights reserved</p>
+    </footer>
   </body>
 </html>
